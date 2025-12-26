@@ -3,103 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avijit Baidya | AI & Cybersecurity Portfolio</title>
+    <title>Avijit Baidya | AI & Security Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>AVIJIT BAIDYA</h1>
-        <p>Cybersecurity Enthusiast | AI Researcher | Computer Science Undergraduate</p>
+        <p>Computer Science Undergraduate | AI & Information Security</p>
         <div class="contact-info">
-            <p>📍 Visakhapatnam, India-530003 | 📞 +91 78904 26896 | ✉️ avijitbaidya22580@gmail.com</p>
-            <p><a href="https://www.linkedin.com/in/avijit-baidya-07b817238" target="_blank" style="color: #58a6ff;">LinkedIn Profile</a></p>
+            <p>📍 Visakhapatnam, India | 📞 +91 78904 26896 | ✉️ avijitbaidya22580@gmail.com</p>
         </div>
     </header>
 
-    <section id="major-project">
-        <h2>Major Project: Hybrid Malware Detection & Analysis</h2>
-        <div class="project-content">
-            <p><strong>Goal:</strong> Develop a robust system to detect zero-day and sophisticated evasive malware[cite: 3].</p>
-            
-            <div style="text-align: center; margin: 20px 0; background: #0d1117; padding: 15px; border-radius: 8px;">
-                <svg width="600" height="150" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="50" width="130" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
-                    <text x="75" y="80" text-anchor="middle" fill="#c9d1d9" font-size="10">PE File Input</text>
-                    <line x1="140" y1="75" x2="180" y2="75" stroke="#8b949e" stroke-width="2"/>
-                    <rect x="180" y="50" width="130" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
-                    <text x="245" y="80" text-anchor="middle" fill="#c9d1d9" font-size="10">Hybrid Feature Fusion</text>
-                    <line x1="310" y1="75" x2="350" y2="75" stroke="#8b949e" stroke-width="2"/>
-                    <rect x="350" y="50" width="130" height="50" rx="5" fill="#161b22" stroke="#39ff14" stroke-width="2"/>
-                    <text x="415" y="80" text-anchor="middle" fill="#c9d1d9" font-size="10">Random Forest ML</text>
-                    <line x1="480" y1="75" x2="520" y2="75" stroke="#8b949e" stroke-width="2"/>
-                    <text x="560" y="80" text-anchor="middle" fill="#39ff14" font-size="12" font-weight="bold">95% Recall</text>
-                </svg>
-                <p style="font-size: 0.8em; color: #8b949e;">Hybrid Pipeline: Static Analysis (pefile) + Dynamic Analysis (Cuckoo Sandbox) </p>
-            </div>
-
-            <h3>Technical Breakdown</h3>
-            <ul>
-                <li><strong>Static Features:</strong> Metadata, Opcode N-grams, and Section names (e.g., .text, .data) extracted via <code>pefile</code>[cite: 48, 71].</li>
-                <li><strong>Dynamic Features:</strong> Behavioral logs, API call sequences, and network connections captured in a <code>Cuckoo Sandbox</code>[cite: 54, 68].</li>
-                <li><strong>Model:</strong> <code>Random Forest (RF)</code> ensemble learning used for classification, achieving >95% recall[cite: 75, 120].</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="research">
-        <h2>Research Contributions</h2>
-        <div class="research-grid">
+    <section id="research-contributions">
+        <h2>Research Experience</h2>
+        <div class="parallel-grid">
             <div class="card">
-                <h3>SAARC Unified Cybersecurity Framework</h3>
-                <p>Proposed a framework focusing on <strong>regional digital sovereignty</strong> and sustainable cyber resilience for South Asian nations[cite: 149, 150].</p>
+                <h3>SAARC Cybersecurity Framework</h3>
+                <p><strong>Goal:</strong> Regional Digital Sovereignty.</p>
+                <p>Researched and proposed a Unified Cybersecurity Framework for SAARC nations to ensure scalable threat detection and sustainable resilience[cite: 149, 150].</p>
             </div>
             <div class="card">
                 <h3>NIT Puducherry: Smart-Grid Security</h3>
-                <p>Developing cybersecurity frameworks for Power Systems, specifically securing <strong>smart meters and IEDs</strong> against IoT-based threats[cite: 153].</p>
+                <p><strong>Focus:</strong> IoT & Power Systems.</p>
+                <p>Developing robust security frameworks for smart meters and IEDs to fortify critical infrastructure against cyber-attacks[cite: 152, 153].</p>
             </div>
         </div>
     </section>
 
-    <section id="development">
-        <h2>Development & Engineering</h2>
-        <div class="dev-item">
-            <h3>SkillSwap P2P Platform</h3>
-            <p>Utilizes an <strong>AI matchmaking algorithm</strong> to pair users for collaborative learning. Built with Node.js, MongoDB, and AI/ML[cite: 160].</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="dev-item">
-            <h3>Hyper Xenc Pty Ltd: Frontend Enhancement</h3>
-            <p>Implemented <strong>responsive web enhancements</strong> using HTML, CSS, and JavaScript, ensuring full cross-browser compatibility[cite: 154, 156].</p>
+    <section id="projects">
+        <h2>Technical Projects</h2>
+        <div class="parallel-grid">
+            <div class="card">
+                <span class="category-tag">Cybersecurity + AI</span>
+                <h3>Hybrid Malware Detection</h3>
+                <p>A system integrating <strong>Reverse Engineering</strong> (static analysis via <code>pefile</code>) with <strong>Machine Learning</strong> (dynamic analysis via <code>Cuckoo Sandbox</code>).</p>
+                <p>Achieved <strong>>95% Recall</strong> using a Random Forest classifier [Presentation].</p>
+            </div>
+
+            <div class="card">
+                <span class="category-tag">Web Dev + AI</span>
+                <h3>SkillSwap P2P Platform</h3>
+                <p>A peer-to-peer exchange platform featuring an <strong>AI matchmaking algorithm</strong> to pair users for collaborative learning[cite: 160].</p>
+                <p>Built with <strong>Node.js, MongoDB, and AI/ML</strong>[cite: 160].</p>
+            </div>
+
+            <div class="card">
+                <span class="category-tag">NLP + Public Health</span>
+                <h3>AI Multilingual Translator</h3>
+                <p>Developed an NLP-driven system to translate public health advisories into <strong>local dialects</strong>, bridging communication gaps for rural communities[cite: 158].</p>
+            </div>
+
+            <div class="card">
+                <span class="category-tag">Computer Vision</span>
+                <h3>Automated Fencing Tool</h3>
+                <p>Designed a specialized tool for <strong>comparative movement analysis</strong> to assist in targeted skill enhancement for fencing[cite: 159].</p>
+            </div>
         </div>
     </section>
 
     <section id="skills">
         <h2>Technical Expertise</h2>
-        <div class="skills-grid">
-            <div>
-                <h4>AI / ML</h4>
-                <span class="skill-tag">NLP</span> <span class="skill-tag">Predictive Defense</span> <span class="skill-tag">Python</span>
+        <div class="skills-flex">
+            <div class="skill-group">
+                <h4>AI & Data Science</h4>
+                <p>Python, NLP, Predictive Defense, Machine Learning [cite: 147, 163]</p>
             </div>
-            <div>
-                <h4>Security</h4>
-                <span class="skill-tag">IoT Security</span> <span class="skill-tag">Cryptography</span> <span class="skill-tag">Penetration Testing</span> <span class="skill-tag">Cloud Security</span>
+            <div class="skill-group">
+                <h4>Cyber & IoT Security</h4>
+                <p>Penetration Testing, Cryptography, Cloud Security, IoT Security [cite: 163, 172]</p>
             </div>
-            <div>
-                <h4>Infrastructure</h4>
-                <span class="skill-tag">Windows OS</span> <span class="skill-tag">Linux</span> <span class="skill-tag">Networking</span>
+            <div class="skill-group">
+                <h4>Web & Infrastructure</h4>
+                <p>Node.js, MongoDB, Linux, Networking, HTML/CSS/JS [cite: 156, 160, 163]</p>
             </div>
         </div>
     </section>
 
     <section id="honors">
-        <h2>Honors & Certifications</h2>
-        <div class="awards">
-            <p>🏆 <strong>ICCR Fully Funded Scholar</strong> - Govt. of India [cite: 175]</p>
-            <p>🥈 <strong>Runner-Up</strong> - HackAP Hackathon & Build Bharat Through AI [cite: 174]</p>
-        </div>
-        <div class="badges">
-            <p><strong>Verified Credentials:</strong> Cisco Networking Academy, Google Career Certificates, and MeitY (IoT & Cloud Security)[cite: 168, 169, 170, 173].</p>
+        <h2>Honors & Recognition</h2>
+        <div class="awards-list">
+            <p>🌟 <strong>ICCR Fully Funded Scholarship</strong> – Govt. of India [cite: 175]</p>
+            <p>🏆 <strong>Runner-Up</strong> – HackAP Hackathon & Build Bharat Through AI [cite: 174]</p>
+            <p>📜 <strong>Certifications:</strong> Cisco (Intro to Cyber), Google (Foundations of Cyber), MeitY (IoT & Cloud Security)[cite: 168, 169, 170, 173].</p>
         </div>
     </section>
 
