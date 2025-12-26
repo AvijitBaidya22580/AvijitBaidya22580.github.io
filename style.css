@@ -1,86 +1,36 @@
-:root {
-    --bg-dark: #0d1117;
-    --card-bg: #161b22;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --accent-blue: #58a6ff;
-    --accent-green: #39ff14;
-    --border-color: #30363d;
-}
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-primary);
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-}
-
-header {
-    background-color: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-header h1 {
-    color: var(--accent-blue);
-    margin-bottom: 0.5rem;
-}
-
-.header-link {
-    color: var(--accent-blue);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.header-link:hover {
-    text-decoration: underline;
-}
-
+/* Layout for Parallel Sections */
 .parallel-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 15px;
 }
 
 .card {
-    background: var(--card-bg);
+    background: #0d1117;
     border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 .category-tag {
+    font-size: 0.75rem;
     color: var(--accent-green);
-    font-size: 0.8rem;
+    text-transform: uppercase;
     font-weight: bold;
-}
-
-section {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 20px;
-}
-
-h2 {
-    color: var(--accent-blue);
-    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 10px;
 }
 
 .skills-flex {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .skill-group {
     flex: 1;
-    min-width: 250px;
-    background: var(--card-bg);
-    padding: 15px;
-    border-radius: 8px;
+    min-width: 200px;
 }
