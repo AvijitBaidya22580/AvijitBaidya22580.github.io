@@ -3,96 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avijit Baidya | AI & Security Portfolio</title>
+    <title>Avijit Baidya | Cybersecurity & AI Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>AVIJIT BAIDYA</h1>
-        <p>Computer Science Undergraduate | AI & Information Security</p>
-        <div class="contact-info">
-            <p>
-                📍 Visakhapatnam, India | 📞 +91 78904 26896  | 
-                ✉️ avijitbaidya22580@gmail.com
-                🔗 <a href="https://www.linkedin.com/in/avijit-baidya-07b817238" target="_blank" class="header-link">LinkedIn</a> 
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AVIJIT.SEC</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#honors">Honors</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header Section -->
+    <header class="hero-section" id="about">
+        <div class="hero-content">
+            <div class="profile-badge">Portfolio</div>
+            <h1>AVIJIT BAIDYA</h1>
+            <p class="hero-subtitle">Computer Science Undergraduate & Cybersecurity Enthusiast</p>
+            <p class="hero-description">
+                Passionate about the intersection of <strong>Artificial Intelligence</strong> and <strong>Information Security</strong>. 
+                Dedicated to developing predictive defense mechanisms, security scanning tools, and fortifying critical digital infrastructure.
             </p>
+            <div class="contact-grid">
+                <span class="contact-item">
+                    📍 Visakhapatnam, India
+                </span>
+                <span class="contact-item">
+                    ✉️ <a href="mailto:avijitbaidya22580@gmail.com">avijitbaidya22580@gmail.com</a>
+                </span>
+                <span class="contact-item">
+                    🔗 <a href="https://www.linkedin.com/in/avijit-baidya-07b817238" target="_blank">LinkedIn</a>
+                </span>
+                <span class="contact-item">
+                    💻 <a href="https://github.com/AvijitBaidya22580" target="_blank">GitHub Profile</a>
+                </span>
+            </div>
         </div>
     </header>
 
-    <section id="research-contributions">
-        <h2>Research Experience</h2>
-        <div class="parallel-grid">
-            <div class="card">
-                <h3>SAARC Cybersecurity Framework</h3>
-                <p><strong>Goal:</strong> Regional Digital Sovereignty.</p>
-                <p>Researched and proposed a Unified Cybersecurity Framework for SAARC nations to ensure scalable threat detection and sustainable resilience.</p>
+    <!-- Professional Experience & Research -->
+    <section id="experience">
+        <div class="section-header">
+            <span class="section-tag">Career Track</span>
+            <h2>Experience & Research</h2>
+        </div>
+        <div class="timeline">
+            <!-- Elevate Labs Internship -->
+            <div class="timeline-item">
+                <div class="timeline-badge">Internship</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Cyber Security Intern</h3>
+                        <span class="timeline-date">Jan 2026 – Apr 2026</span>
+                    </div>
+                    <h4 class="company-name">Elevate Labs</h4>
+                    <p>
+                        Completed a rigorous, hands-on 16-task curriculum spanning attack surface analysis, system hardening, and threat detection.
+                    </p>
+                    <ul class="timeline-bullets">
+                        <li>Developed a modular Python **Web Application Vulnerability Scanner** mapping issues to current OWASP Top 10 guidelines.</li>
+                        <li>Configured host-based security models, audited authentication databases, and performed cryptographic key signatures.</li>
+                        <li>Simulated an **Intrusion Detection System (IDS)** log parser and built Incident Response Playbooks following NIST guidelines.</li>
+                        <li>Consolidated all task modules, scripts, and reports into a single Git portfolio repository: 
+                            <strong><a href="https://github.com/AvijitBaidya22580/Elevate-Labs-Internship" target="_blank">Elevate-Labs-Internship</a></strong>.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="card">
-                <h3>NIT Puducherry: Smart-Grid Security</h3>
-                <p><strong>Focus:</strong> IoT & Power Systems.</p>
-                <p>Developing robust security frameworks for smart meters and IEDs to fortify critical infrastructure against cyber-attacks.</p>
+
+            <!-- NIT Puducherry -->
+            <div class="timeline-item">
+                <div class="timeline-badge">Research</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Research Assistant (Smart-Grid Security)</h3>
+                        <span class="timeline-date">Ongoing</span>
+                    </div>
+                    <h4 class="company-name">NIT Puducherry</h4>
+                    <p>
+                        Designing secure network frameworks for power systems and Internet of Things (IoT) hardware.
+                    </p>
+                    <ul class="timeline-bullets">
+                        <li>Developing threat-resilient communication standards for Smart Meters and Intelligent Electronic Devices (IEDs).</li>
+                        <li>Auditing physical-to-digital attack vectors in critical industrial control infrastructure to prevent remote sabotage.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SAARC Framework -->
+            <div class="timeline-item">
+                <div class="timeline-badge">Proposal</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Research Contributor (Regional Security)</h3>
+                        <span class="timeline-date">2025</span>
+                    </div>
+                    <h4 class="company-name">SAARC Digital Framework</h4>
+                    <p>
+                        Formulated and proposed a **Unified Cybersecurity Framework** to support regional digital sovereignty across South Asian nations.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Technical Projects -->
     <section id="projects">
-        <h2>Technical Projects</h2>
-        <div class="parallel-grid">
-            <div class="card">
-                <span class="category-tag">Cybersecurity + AI</span>
-                <h3>Hybrid Malware Detection</h3>
-                <p>A system integrating <strong>Reverse Engineering</strong> (static analysis via <code>pefile</code>) with <strong>Machine Learning</strong> (dynamic analysis via <code>Cuckoo Sandbox</code>).</p>
-                <p>Achieved <strong>>95% Recall</strong> using a Random Forest classifier.</p>
+        <div class="section-header">
+            <span class="section-tag">Showcase</span>
+            <h2>Technical Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Web App Scanner -->
+            <div class="project-card">
+                <div class="project-tags">
+                    <span class="tag tag-sec">Cybersecurity</span>
+                    <span class="tag tag-py">Python / Flask</span>
+                </div>
+                <h3>Web Application Vulnerability Scanner</h3>
+                <p>
+                    An automated web scanner featuring a custom link/form crawler, an injection payload engine, and a Flask dashboard interface.
+                </p>
+                <div class="project-stats">
+                    <span>🔍 OWASP Top 10 Injections</span>
+                    <span>📊 JSON & HTML Reports</span>
+                </div>
+                <a href="https://github.com/AvijitBaidya22580/Elevate-Labs-Internship/tree/main/Task-07" target="_blank" class="project-link">View Repository →</a>
             </div>
 
-            <div class="card">
-                <span class="category-tag">Web Dev + AI</span>
+            <!-- Attack Surface Analyzer -->
+            <div class="project-card">
+                <div class="project-tags">
+                    <span class="tag tag-sec">Information Security</span>
+                    <span class="tag tag-py">Python</span>
+                </div>
+                <h3>Attack Surface Analyzer</h3>
+                <p>
+                    Utility that programmatically evaluates system exposure by scanning common ports, auditing HTTP defensive headers, and checking SSL/TLS expiry status.
+                </p>
+                <a href="https://github.com/AvijitBaidya22580/Elevate-Labs-Internship/tree/main/Task-01" target="_blank" class="project-link">View Repository →</a>
+            </div>
+
+            <!-- Hybrid Malware Detector -->
+            <div class="project-card">
+                <div class="project-tags">
+                    <span class="tag tag-ai">Machine Learning</span>
+                    <span class="tag tag-py">Python</span>
+                </div>
+                <h3>Hybrid Malware Detection Engine</h3>
+                <p>
+                    Integrates static reverse engineering analysis (via <code>pefile</code>) with behavioral analysis (via <code>Cuckoo Sandbox</code>).
+                </p>
+                <div class="project-stats">
+                    <span>📈 >95% Recall Rate</span>
+                    <span>🌲 Random Forest Classifier</span>
+                </div>
+                <a href="https://github.com/AvijitBaidya22580/android-malware-detector" target="_blank" class="project-link">View Repository →</a>
+            </div>
+
+            <!-- SkillSwap -->
+            <div class="project-card">
+                <div class="project-tags">
+                    <span class="tag tag-dev">Full Stack</span>
+                    <span class="tag tag-js">Node.js / Mongo</span>
+                </div>
                 <h3>SkillSwap P2P Platform</h3>
-                <p>A peer-to-peer exchange platform featuring an <strong>AI matchmaking algorithm</strong> to pair users for collaborative learning.</p>
-                <p>Built with <strong>Node.js, MongoDB, and AI/ML</strong>.</p>
-            </div>
-
-            <div class="card">
-                <span class="category-tag">NLP + Public Health</span>
-                <h3>AI Multilingual Translator</h3>
-                <p>Developed an NLP-driven system to translate public health advisories into <strong>local dialects</strong>, bridging communication gaps for rural communities.</p>
-            </div>
-
-            <div class="card">
-                <span class="category-tag">Computer Vision</span>
-                <h3>Automated Fencing Tool</h3>
-                <p>Designed a specialized tool for <strong>comparative movement analysis</strong> to assist in targeted skill enhancement for fencing.</p>
+                <p>
+                    A peer-to-peer collaboration platform utilizing a custom matchmaking algorithm to pair users based on skill profiles.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Technical Skills Matrix -->
     <section id="skills">
-        <h2>Technical Expertise</h2>
-        <div class="skills-flex">
-            <div class="skill-group">
-                <h4>AI & Data Science</h4>
-                <p>Python, NLP, Predictive Defense, Machine Learning </p>
+        <div class="section-header">
+            <span class="section-tag">Core Assets</span>
+            <h2>Technical Expertise</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skills-category-card">
+                <div class="category-icon">🛡️</div>
+                <h3>Cyber & IoT Security</h3>
+                <div class="badge-container">
+                    <span class="badge">Penetration Testing</span>
+                    <span class="badge">API Security</span>
+                    <span class="badge">OS Hardening</span>
+                    <span class="badge">Cryptography</span>
+                    <span class="badge">Incident Response</span>
+                    <span class="badge">Smart-Grid & IoT Defense</span>
+                </div>
             </div>
-            <div class="skill-group">
-                <h4>Cyber & IoT Security</h4>
-                <p>Penetration Testing, Cryptography, Cloud Security, IoT Security </p>
+            
+            <div class="skills-category-card">
+                <div class="category-icon">🤖</div>
+                <h3>AI & Data Science</h3>
+                <div class="badge-container">
+                    <span class="badge">Python</span>
+                    <span class="badge">Machine Learning</span>
+                    <span class="badge">Natural Language Processing</span>
+                    <span class="badge">Predictive Defense Models</span>
+                    <span class="badge">Malware Analysis</span>
+                </div>
             </div>
-            <div class="skill-group">
-                <h4>Web & Infrastructure</h4>
-                <p>Node.js, MongoDB, Linux, Networking, HTML/CSS/JS </p>
+
+            <div class="skills-category-card">
+                <div class="category-icon">💻</div>
+                <h3>Web & Infrastructure</h3>
+                <div class="badge-container">
+                    <span class="badge">Node.js</span>
+                    <span class="badge">MongoDB</span>
+                    <span class="badge">Flask</span>
+                    <span class="badge">HTML5 / CSS3 / JS</span>
+                    <span class="badge">Linux Systems</span>
+                    <span class="badge">Git / Version Control</span>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Honors, Recognition & Certs -->
     <section id="honors">
-        <h2>Honors & Recognition</h2>
-        <div class="awards-list">
-            <p>🌟 <strong>ICCR Fully Funded Scholarship</strong> – Govt. of India </p>
-            <p>🏆 <strong>Runner-Up</strong> – HackAP Hackathon & Build Bharat Through AI </p>
-            <p>📜 <strong>Certifications:</strong> Cisco (Intro to Cyber), Google (Foundations of Cyber), MeitY (IoT & Cloud Security).</p>
+        <div class="section-header">
+            <span class="section-tag">Achievements</span>
+            <h2>Honors & Certifications</h2>
+        </div>
+        <div class="honors-grid">
+            <div class="honors-card">
+                <h3>🌟 ICCR Fully Funded Scholarship</h3>
+                <p>Awarded by the Government of India for academic excellence.</p>
+            </div>
+            <div class="honors-card">
+                <h3>🏆 HackAP & Build Bharat Runner-Up</h3>
+                <p>Recognized for designing innovative AI-driven software solutions in competitive hackathons.</p>
+            </div>
+            <div class="honors-card">
+                <h3>📜 Industry Certifications</h3>
+                <div class="cert-list">
+                    <span class="cert-item">Cisco: Introduction to Cybersecurity</span>
+                    <span class="cert-item">Google: Foundations of Cybersecurity</span>
+                    <span class="cert-item">MeitY: IoT & Cloud Security</span>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Avijit Baidya. All Rights Reserved.</p>
+            <p>Built for modern web portfolio standards.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
