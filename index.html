@@ -16,13 +16,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">AVIJIT.SEC</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#honors">Honors & Volunteer</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#honors">Honors & Volunteer</a>
+                </div>
+                <!-- Dynamic Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle-btn">🌙 Dark Mode</button>
             </div>
         </div>
     </nav>
@@ -48,7 +52,7 @@
         </div>
     </header>
 
-    <!-- Work Experience & Research Timeline -->
+    <!-- Professional Experience & Research Timeline -->
     <section id="experience">
         <div class="section-header">
             <span class="section-tag">Career Journey</span>
@@ -143,12 +147,20 @@
         <div class="section-header">
             <span class="section-tag">GitHub Repositories</span>
             <h2>Technical Projects</h2>
+            
+            <!-- Dynamic Project Filtering Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="sec">Cybersecurity</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="dev">Web Dev</button>
+            </div>
         </div>
-        <div class="projects-grid">
+        <div class="projects-grid" id="projects-container">
             <!-- Android Malware Detector -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-ai">Machine Learning</span>
+                    <span class="tag tag-ai">AI & ML</span>
                     <span class="tag tag-sec">Cybersecurity</span>
                 </div>
                 <h3>Android Malware Detector</h3>
@@ -161,8 +173,8 @@
             <!-- Federated GAT-Twin -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-ai">Federated Learning</span>
-                    <span class="tag tag-sec">Smart Grid</span>
+                    <span class="tag tag-ai">AI & ML</span>
+                    <span class="tag tag-sec">Cybersecurity</span>
                 </div>
                 <h3>Federated GAT-Twin Security</h3>
                 <p>
@@ -174,8 +186,8 @@
             <!-- Web App Scanner -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-sec">Penetration Testing</span>
-                    <span class="tag tag-py">Python / Flask</span>
+                    <span class="tag tag-sec">Cybersecurity</span>
+                    <span class="tag tag-dev">Web Dev</span>
                 </div>
                 <h3>Web Application Vulnerability Scanner</h3>
                 <p>
@@ -187,8 +199,8 @@
             <!-- Cognifyz ML -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-ai">Data Science</span>
-                    <span class="tag tag-py">Jupyter</span>
+                    <span class="tag tag-ai">AI & ML</span>
+                    <span class="tag tag-py">Python</span>
                 </div>
                 <h3>Cognifyz ML Internship Projects</h3>
                 <p>
@@ -200,7 +212,7 @@
             <!-- Attack Surface -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-sec">Reconnaissance</span>
+                    <span class="tag tag-sec">Cybersecurity</span>
                     <span class="tag tag-py">Python</span>
                 </div>
                 <h3>Attack Surface Analyzer</h3>
@@ -213,8 +225,8 @@
             <!-- SkillSwap -->
             <div class="project-card">
                 <div class="project-tags">
-                    <span class="tag tag-dev">Full Stack</span>
-                    <span class="tag tag-js">Node.js / MongoDB</span>
+                    <span class="tag tag-dev">Web Dev</span>
+                    <span class="tag tag-js">Database</span>
                 </div>
                 <h3>SkillSwap P2P Platform</h3>
                 <p>
@@ -365,6 +377,9 @@
         </div>
     </section>
 
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -373,5 +388,77 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Dynamic Interactions -->
+    <script>
+        // 1. Light/Dark Mode Switcher
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            themeToggleBtn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Load saved theme configuration
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggleBtn.textContent = '☀️ Light Mode';
+        }
+
+        // 2. Project Interactive Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active states
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'flex';
+                        setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
+                    } else {
+                        const tags = card.querySelectorAll('.tag');
+                        let match = false;
+                        tags.forEach(tag => {
+                            if (tag.textContent.toLowerCase().includes(filter.toLowerCase()) || 
+                                (filter === 'sec' && tag.textContent.toLowerCase().includes('cyber')) ||
+                                (filter === 'dev' && tag.textContent.toLowerCase().includes('web'))) {
+                                match = true;
+                            }
+                        });
+
+                        if (match) {
+                            card.style.display = 'flex';
+                            setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.95)';
+                            setTimeout(() => { card.style.display = 'none'; }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // 3. Floating Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
