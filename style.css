@@ -95,7 +95,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
@@ -134,7 +134,7 @@ h1, h2, h3, h4 {
     color: var(--text-secondary);
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -143,7 +143,7 @@ h1, h2, h3, h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .contact-item {
@@ -274,9 +274,12 @@ section {
 .timeline-bullets a {
     color: var(--accent-cyan);
     text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-smooth);
 }
 
 .timeline-bullets a:hover {
+    color: var(--text-primary);
     text-decoration: underline;
 }
 
@@ -402,50 +405,133 @@ section {
     border-color: var(--accent-cyan);
 }
 
-/* Honors Grid */
-.honors-grid {
+/* Education Grid */
+.education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
 
-.honors-card {
+.education-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
+    position: relative;
+    transition: var(--transition-smooth);
 }
 
-.honors-card h3 {
-    font-size: 1.15rem;
+.education-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.edu-date {
+    display: block;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
 }
 
-.honors-card p {
+.education-card h3 {
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-card h4 {
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.education-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Honors, Recognition & Volunteering Columns */
+.honors-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+@media(max-width: 900px) {
+    .honors-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.honors-column h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.spaced-title {
+    margin-top: 2.5rem;
+}
+
+.honors-card-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: var(--transition-smooth);
+}
+
+.honors-card-item:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.item-date {
+    display: block;
+    color: var(--accent-purple);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.honors-card-item h4 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.honors-card-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .cert-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 0.5rem;
+    gap: 12px;
 }
 
 .cert-item {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     position: relative;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .cert-item::before {
-    content: "•";
-    color: var(--accent-blue);
+    content: "⚡";
     position: absolute;
     left: 0;
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+}
+
+.language-badges {
+    margin-top: 1rem;
 }
 
 /* Footer */
